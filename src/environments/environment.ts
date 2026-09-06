@@ -1,3 +1,7 @@
+// Tell TypeScript that the global 'process' variable exists
+declare var process: any;
+
 export const environment = {
-  API_URL: 'http://localhost:5000/api/v1',
+  // react-scripts requires custom environment variables to start with REACT_APP_
+  API_URL: process.env.REACT_APP_API_URL || 'http://localhost:3001'
 };
