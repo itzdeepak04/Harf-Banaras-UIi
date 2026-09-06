@@ -164,7 +164,7 @@ export const CouponsPage: React.FC = () => {
       {error && <p className="error">{error}</p>}
 
       {!loading && !error && (
-        <table className="admin-table">
+        <div className="admin-table-wrapper"><table className="admin-table">
           <thead>
             <tr>
               <th>Code</th><th>Type</th><th>Value</th><th>Min Order</th><th>Used</th><th>Expires</th><th>Active</th><th></th>
@@ -191,7 +191,7 @@ export const CouponsPage: React.FC = () => {
             ))}
             {coupons.length === 0 && <tr><td colSpan={8}>No coupons yet.</td></tr>}
           </tbody>
-        </table>
+        </table></div>
       )}
     </div>
   );

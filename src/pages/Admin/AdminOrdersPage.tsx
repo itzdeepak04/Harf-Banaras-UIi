@@ -72,7 +72,7 @@ export const AdminOrdersPage: React.FC = () => {
       {error && <p className="error">{error}</p>}
 
       {!loading && !error && (
-        <table className="admin-table">
+        <div className="admin-table-wrapper"><table className="admin-table">
           <thead>
             <tr>
               <th>Order #</th>
@@ -114,7 +114,7 @@ export const AdminOrdersPage: React.FC = () => {
               </tr>
             )}
           </tbody>
-        </table>
+        </table></div>
       )}
     </div>
   );
